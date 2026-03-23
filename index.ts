@@ -6,6 +6,7 @@ const input = (await Bun.stdin.text())
 import abc051a from "./solvers/abc/051/a";
 import abc095a from "./solvers/abc/095/a";
 import abc101a from "./solvers/abc/101/a";
+import abc115a from "./solvers/abc/115/a";
 import abc122a from "./solvers/abc/122/a";
 import abc141a from "./solvers/abc/141/a";
 import abc146a from "./solvers/abc/146/a";
@@ -28,11 +29,15 @@ if (input.length === 1) {
     else if (/^(SUN|MON|TUE|WED|THU|FRI|SAT)$/.test(sym)) abc146a(input);
     else if (/^A[BR]C$/.test(sym)) abc166a(input);
     else if (/^[SR]{3}$/.test(sym)) abc175a(input);
-    else if (/^[01]$/.test(sym)) abc178a(input);
     else if (/^\dx\d$/.test(sym)) abc232a_abc389a(input);
     else if (/^(Mon|Thues|Wednes|Thurs|Fri|Satur|Sun)day$/.test(sym))
       abc267a_arc012a(input);
     else if (/^ABC\d{3}$/.test(sym)) abc350a(input);
     else if (/^\d-\d$/.test(sym)) abc422a(input);
+    else if (/^(0|-?[1-9][0-9]*)$/.test(sym)) {
+      const num = BigInt(sym);
+      if (0n <= num && num <= 1n) abc178a(input);
+      if (22n <= num && num <= 25n) abc115a(input);
+    }
   }
 }
