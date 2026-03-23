@@ -11,8 +11,10 @@ import abc141a from "./solvers/abc/141/a";
 import abc146a from "./solvers/abc/146/a";
 import abc166a from "./solvers/abc/166/a";
 import abc175a from "./solvers/abc/175/a";
+import abc178a from "./solvers/abc/178/a";
 import abc232a_abc389a from "./solvers/multi/abc232a_abc389a";
 import abc267a_arc012a from "./solvers/multi/abc267a_arc012a";
+import abc350a from "./solvers/abc/350/a";
 
 if (input.length === 1) {
   if (input[0].length === 1) {
@@ -25,8 +27,10 @@ if (input.length === 1) {
     else if (/^(SUN|MON|TUE|WED|THU|FRI|SAT)$/.test(sym)) abc146a(input);
     else if (/^A[BR]C$/.test(sym)) abc166a(input);
     else if (/^[SR]{3}$/.test(sym)) abc175a(input);
+    else if (/^[01]$/.test(sym)) abc178a(input);
     else if (/^\dx\d$/.test(sym)) abc232a_abc389a(input);
     else if (/^(Mon|Thues|Wednes|Thurs|Fri|Satur|Sun)day$/.test(sym))
       abc267a_arc012a(input);
+    else if (/^ABC\d{3}$/.test(sym)) abc350a(input);
   }
 }
