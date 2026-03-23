@@ -14,8 +14,10 @@ import abc166a from "./solvers/abc/166/a";
 import abc175a from "./solvers/abc/175/a";
 import abc178a from "./solvers/abc/178/a";
 import abc232a_abc389a from "./solvers/multi/abc232a_abc389a";
+import abc247a from "./solvers/abc/247/a";
 import abc262a from "./solvers/abc/262/a";
 import abc267a_arc012a from "./solvers/multi/abc267a_arc012a";
+import abc323a from "./solvers/abc/323/a";
 import abc350a from "./solvers/abc/350/a";
 import abc422a from "./solvers/abc/422/a";
 
@@ -31,8 +33,10 @@ if (input.length === 1) {
     else if (/^A[BR]C$/.test(sym)) abc166a(input);
     else if (/^[SR]{3}$/.test(sym)) abc175a(input);
     else if (/^\dx\d$/.test(sym)) abc232a_abc389a(input);
+    else if (/^[01]{4}$/.test(sym)) abc247a(input);
     else if (/^(Mon|Thues|Wednes|Thurs|Fri|Satur|Sun)day$/.test(sym))
       abc267a_arc012a(input);
+    else if (/^[01]{16}$/.test(sym)) abc323a(input);
     else if (/^ABC\d{3}$/.test(sym)) abc350a(input);
     else if (/^\d-\d$/.test(sym)) abc422a(input);
     else if (/^(0|-?[1-9][0-9]*)$/.test(sym)) {
