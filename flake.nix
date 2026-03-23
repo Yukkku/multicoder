@@ -8,7 +8,6 @@
       eachSystem = nixpkgs.lib.genAttrs [
         "aarch64-darwin"
         "aarch64-linux"
-        "i686-linux"
         "x86_64-darwin"
         "x86_64-linux"
       ];
@@ -20,13 +19,12 @@
           pkgs = import nixpkgs { inherit system; };
         in
         {
-          default = pkgs.mkShell {
-            name = "rust environment";
+          default = pkgs.mkShellNoCC {
+            name = "dev";
             packages = with pkgs; [
-              cargo
-              rustc
-              rust-analyzer
-              rustfmt
+              bun
+              typescript-language-server
+	      prettier
               nixd
               nixfmt
             ];
