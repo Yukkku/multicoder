@@ -15,6 +15,7 @@ import abc178a from "./solvers/abc/178/a";
 import abc232a_abc389a from "./solvers/multi/abc232a_abc389a";
 import abc267a_arc012a from "./solvers/multi/abc267a_arc012a";
 import abc350a from "./solvers/abc/350/a";
+import abc422a from "./solvers/abc/422/a";
 
 if (input.length === 1) {
   if (input[0].length === 1) {
@@ -32,5 +33,6 @@ if (input.length === 1) {
     else if (/^(Mon|Thues|Wednes|Thurs|Fri|Satur|Sun)day$/.test(sym))
       abc267a_arc012a(input);
     else if (/^ABC\d{3}$/.test(sym)) abc350a(input);
+    else if (/^\d-\d$/.test(sym)) abc422a(input);
   }
 }
