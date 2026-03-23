@@ -3,6 +3,7 @@ const input = (await Bun.stdin.text())
   .split("\n")
   .map((line) => line.trim().split(/\s+/));
 
+import abc051a from "./solvers/abc/051/a";
 import abc095a from "./solvers/abc/095/a";
 import abc101a from "./solvers/abc/101/a";
 import abc122a from "./solvers/abc/122/a";
@@ -16,7 +17,8 @@ import abc267a_arc012a from "./solvers/multi/abc267a_arc012a";
 if (input.length === 1) {
   if (input[0].length === 1) {
     const sym = input[0][0];
-    if (/^[ox]{3}$/.test(sym)) abc095a(input);
+    if (/^[a-z]{5},[a-z]{7},[a-z]{5}$/.test(sym)) abc051a(input);
+    else if (/^[ox]{3}$/.test(sym)) abc095a(input);
     else if (/^[+-]{4}$/.test(sym)) abc101a(input);
     else if (/^[ACGT]$/.test(sym)) abc122a(input);
     else if (/^(Sunny|Cloudy|Rainy)$/.test(sym)) abc141a(input);
