@@ -1,3 +1,15 @@
+fn abc141a(input: &str) {
+    println!(
+        "{}",
+        match input {
+            "Sunny" => "Cloudy",
+            "Cloudy" => "Rainy",
+            "Rainy" => "Sunny",
+            _ => unreachable!(),
+        }
+    )
+}
+
 fn abc166a(input: &str) {
     if input == "ABC" {
         println!("ARC");
@@ -22,6 +34,7 @@ fn abc267a(input: &str) {
 
 pub fn solve(input: String) {
     match input.as_str() {
+        "Sunny" | "Cloudy" | "Rainy" => abc141a(&input),
         "ABC" | "ARC" => abc166a(&input),
         "Monday" | "Tuesday" | "Wednesday" | "Thursdat" | "Friday" => abc267a(&input),
         _ => todo!(),
