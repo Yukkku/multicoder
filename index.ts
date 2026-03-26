@@ -27,6 +27,7 @@ import abc319a from "./solvers/abc/319/a";
 import abc350a from "./solvers/abc/350/a";
 import abc360a from "./solvers/abc/360/a";
 import abc378a from "./solvers/abc/378/a";
+import abc419a from "./solvers/abc/419/a";
 import abc422a from "./solvers/abc/422/a";
 
 if (input.length === 1) {
@@ -50,6 +51,7 @@ if (input.length === 1) {
     else if (/^ABC\d{3}$/.test(sym)) abc350a(input);
     else if (/^2017\/01\/(0[1-9]|[12]\d|3[01])$/.test(sym)) abc085a(input);
     else if (/^[a-z]$/.test(sym)) abc049a(input);
+    else if (/^(red|blue|green)$/.test(sym)) abc419a(input);
     else if (/^[a-z]{5},[a-z]{7},[a-z]{5}$/.test(sym)) abc051a(input);
     else if (/^[ox]{3}$/.test(sym)) abc095a(input);
     else if (/^[+-]{4}$/.test(sym)) abc101a(input);
