@@ -23,6 +23,7 @@ import abc247a from "./solvers/abc/247/a";
 import abc262a from "./solvers/abc/262/a";
 import abc267a_arc012a from "./solvers/multi/abc267a_arc012a";
 import abc323a from "./solvers/abc/323/a";
+import abc319a from "./solvers/abc/319/a";
 import abc350a from "./solvers/abc/350/a";
 import abc360a from "./solvers/abc/360/a";
 import abc378a from "./solvers/abc/378/a";
@@ -34,6 +35,12 @@ if (input.length === 1) {
     if (/^(Sunny|Cloudy|Rainy)$/.test(sym)) abc141a(input);
     else if (/^(Mon|Thues|Wednes|Thurs|Fri|Satur|Sun)day$/.test(sym))
       abc267a_arc012a(input);
+    if (
+      /^(tourist|ksun48|Benq|Um_nik|apiad|Stonefeang|ecnerwala|mnbvmar|newbiedmy|semiexp)$/.test(
+        sym,
+      )
+    )
+      abc319a(input);
     else if (/^[ACGT]$/.test(sym)) abc122a(input);
     else if (/^A[BR]C$/.test(sym)) abc166a(input);
     else if (/^[AB]{3}$/.test(sym)) abc158a(input);
