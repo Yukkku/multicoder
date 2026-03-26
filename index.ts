@@ -27,6 +27,7 @@ import abc319a from "./solvers/abc/319/a";
 import abc350a from "./solvers/abc/350/a";
 import abc360a from "./solvers/abc/360/a";
 import abc378a from "./solvers/abc/378/a";
+import abc391a from "./solvers/abc/391/a";
 import abc419a from "./solvers/abc/419/a";
 import abc422a from "./solvers/abc/422/a";
 
@@ -43,6 +44,7 @@ if (input.length === 1) {
     )
       abc319a(input);
     else if (/^[ACGT]$/.test(sym)) abc122a(input);
+    else if (/^(N[EW]?|S[EW]?|E|W)$/.test(sym)) abc391a(input);
     else if (/^A[BR]C$/.test(sym)) abc166a(input);
     else if (/^[AB]{3}$/.test(sym)) abc158a(input);
     else if (/^[SR]{3}$/.test(sym)) abc175a(input);
