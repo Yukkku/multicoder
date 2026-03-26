@@ -3,6 +3,7 @@ const input = (await Bun.stdin.text())
   .split("\n")
   .map((line) => line.trim().split(/\s+/));
 
+import abc048a from "./solvers/abc/048/a";
 import abc051a from "./solvers/abc/051/a";
 import abc085a from "./solvers/abc/085/a";
 import abc095a from "./solvers/abc/095/a";
@@ -47,5 +48,12 @@ if (input.length === 1) {
       if (22n <= num && num <= 25n) abc115a(input);
       if (2000n <= num && num <= 3000n) abc262a(input);
     }
+  } else if (input[0].length === 3) {
+    if (
+      input[0][0] === "AtCoder" &&
+      /^[A-Z][a-z]{0,99}$/.test(input[0][1]) &&
+      input[0][2] === "Contest"
+    )
+      abc048a(input);
   }
 }
