@@ -29,21 +29,21 @@ import abc422a from "./solvers/abc/422/a";
 if (input.length === 1) {
   if (input[0].length === 1) {
     const sym = input[0][0];
-    if (/^[a-z]$/.test(sym)) abc049a(input);
-    else if (/^[a-z]{5},[a-z]{7},[a-z]{5}$/.test(sym)) abc051a(input);
-    else if (/^2017\/01\/(0[1-9]|[12]\d|3[01])$/.test(sym)) abc085a(input);
-    else if (/^[ox]{3}$/.test(sym)) abc095a(input);
-    else if (/^[+-]{4}$/.test(sym)) abc101a(input);
-    else if (/^[ACGT]$/.test(sym)) abc122a(input);
-    else if (/^(Sunny|Cloudy|Rainy)$/.test(sym)) abc141a(input);
-    else if (/^(SUN|MON|TUE|WED|THU|FRI|SAT)$/.test(sym)) abc146a(input);
-    else if (/^A[BR]C$/.test(sym)) abc166a(input);
-    else if (/^[SR]{3}$/.test(sym)) abc175a(input);
-    else if (/^\dx\d$/.test(sym)) abc232a_abc389a(input);
+    if (/^(Sunny|Cloudy|Rainy)$/.test(sym)) abc141a(input);
     else if (/^(Mon|Thues|Wednes|Thurs|Fri|Satur|Sun)day$/.test(sym))
       abc267a_arc012a(input);
-    else if (/^ABC\d{3}$/.test(sym)) abc350a(input);
+    else if (/^[ACGT]$/.test(sym)) abc122a(input);
+    else if (/^A[BR]C$/.test(sym)) abc166a(input);
+    else if (/^[SR]{3}$/.test(sym)) abc175a(input);
+    else if (/^(SUN|MON|TUE|WED|THU|FRI|SAT)$/.test(sym)) abc146a(input);
     else if (/^(RMS|RSM|MRS|MSR|SRM|SMR)$/.test(sym)) abc360a(input);
+    else if (/^ABC\d{3}$/.test(sym)) abc350a(input);
+    else if (/^2017\/01\/(0[1-9]|[12]\d|3[01])$/.test(sym)) abc085a(input);
+    else if (/^[a-z]$/.test(sym)) abc049a(input);
+    else if (/^[a-z]{5},[a-z]{7},[a-z]{5}$/.test(sym)) abc051a(input);
+    else if (/^[ox]{3}$/.test(sym)) abc095a(input);
+    else if (/^[+-]{4}$/.test(sym)) abc101a(input);
+    else if (/^\dx\d$/.test(sym)) abc232a_abc389a(input);
     else if (/^\d-\d$/.test(sym)) abc422a(input);
     else if (/^[01]{4}$/.test(sym)) abc247a(input);
     else if (/^[01]{6}$/.test(sym)) tenka1_2017a(input);
