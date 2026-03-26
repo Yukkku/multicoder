@@ -21,6 +21,7 @@ import abc262a from "./solvers/abc/262/a";
 import abc267a_arc012a from "./solvers/multi/abc267a_arc012a";
 import abc323a from "./solvers/abc/323/a";
 import abc350a from "./solvers/abc/350/a";
+import abc360a from "./solvers/abc/360/a";
 import abc422a from "./solvers/abc/422/a";
 
 if (input.length === 1) {
@@ -41,6 +42,7 @@ if (input.length === 1) {
       abc267a_arc012a(input);
     else if (/^[01]{16}$/.test(sym)) abc323a(input);
     else if (/^ABC\d{3}$/.test(sym)) abc350a(input);
+    else if (/^(RMS|RSM|MRS|MSR|SRM|SMR)$/.test(sym)) abc360a(input);
     else if (/^\d-\d$/.test(sym)) abc422a(input);
     else if (/^(0|-?[1-9][0-9]*)$/.test(sym)) {
       const num = BigInt(sym);
