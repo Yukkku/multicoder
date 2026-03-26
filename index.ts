@@ -4,6 +4,7 @@ const input = (await Bun.stdin.text())
   .map((line) => line.trim().split(/\s+/));
 
 import abc048a from "./solvers/abc/048/a";
+import abc049a from "./solvers/abc/049/a";
 import abc051a from "./solvers/abc/051/a";
 import tenka1_2017a from "./solvers/other/tenka1-2017-beginner/a";
 import abc085a from "./solvers/abc/085/a";
@@ -28,7 +29,8 @@ import abc422a from "./solvers/abc/422/a";
 if (input.length === 1) {
   if (input[0].length === 1) {
     const sym = input[0][0];
-    if (/^[a-z]{5},[a-z]{7},[a-z]{5}$/.test(sym)) abc051a(input);
+    if (/^[a-z]$/.test(sym)) abc049a(input);
+    else if (/^[a-z]{5},[a-z]{7},[a-z]{5}$/.test(sym)) abc051a(input);
     else if (/^2017\/01\/(0[1-9]|[12]\d|3[01])$/.test(sym)) abc085a(input);
     else if (/^[ox]{3}$/.test(sym)) abc095a(input);
     else if (/^[+-]{4}$/.test(sym)) abc101a(input);
