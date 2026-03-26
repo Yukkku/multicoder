@@ -14,6 +14,7 @@ import abc115a from "./solvers/abc/115/a";
 import abc122a from "./solvers/abc/122/a";
 import abc141a from "./solvers/abc/141/a";
 import abc146a from "./solvers/abc/146/a";
+import abc158a from "./solvers/abc/158/a";
 import abc166a from "./solvers/abc/166/a";
 import abc175a from "./solvers/abc/175/a";
 import abc178a from "./solvers/abc/178/a";
@@ -34,6 +35,7 @@ if (input.length === 1) {
       abc267a_arc012a(input);
     else if (/^[ACGT]$/.test(sym)) abc122a(input);
     else if (/^A[BR]C$/.test(sym)) abc166a(input);
+    else if (/^[AB]{3}$/.test(sym)) abc158a(input);
     else if (/^[SR]{3}$/.test(sym)) abc175a(input);
     else if (/^(SUN|MON|TUE|WED|THU|FRI|SAT)$/.test(sym)) abc146a(input);
     else if (/^(RMS|RSM|MRS|MSR|SRM|SMR)$/.test(sym)) abc360a(input);
