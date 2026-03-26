@@ -25,6 +25,7 @@ import abc267a_arc012a from "./solvers/multi/abc267a_arc012a";
 import abc323a from "./solvers/abc/323/a";
 import abc350a from "./solvers/abc/350/a";
 import abc360a from "./solvers/abc/360/a";
+import abc378a from "./solvers/abc/378/a";
 import abc422a from "./solvers/abc/422/a";
 
 if (input.length === 1) {
@@ -63,5 +64,7 @@ if (input.length === 1) {
       input[0][2] === "Contest"
     )
       abc048a(input);
+  } else if (input[0].length === 4) {
+    if (input[0].every((x) => /^[1-4]$/.test(x))) abc378a(input);
   }
 }
