@@ -5,6 +5,7 @@ const input = (await Bun.stdin.text())
 
 import abc048a from "./solvers/abc/048/a";
 import abc051a from "./solvers/abc/051/a";
+import tenka1_2017a from "./solvers/other/tenka1-2017-beginner/a";
 import abc085a from "./solvers/abc/085/a";
 import abc095a from "./solvers/abc/095/a";
 import abc101a from "./solvers/abc/101/a";
@@ -37,13 +38,14 @@ if (input.length === 1) {
     else if (/^A[BR]C$/.test(sym)) abc166a(input);
     else if (/^[SR]{3}$/.test(sym)) abc175a(input);
     else if (/^\dx\d$/.test(sym)) abc232a_abc389a(input);
-    else if (/^[01]{4}$/.test(sym)) abc247a(input);
     else if (/^(Mon|Thues|Wednes|Thurs|Fri|Satur|Sun)day$/.test(sym))
       abc267a_arc012a(input);
-    else if (/^[01]{16}$/.test(sym)) abc323a(input);
     else if (/^ABC\d{3}$/.test(sym)) abc350a(input);
     else if (/^(RMS|RSM|MRS|MSR|SRM|SMR)$/.test(sym)) abc360a(input);
     else if (/^\d-\d$/.test(sym)) abc422a(input);
+    else if (/^[01]{4}$/.test(sym)) abc247a(input);
+    else if (/^[01]{6}$/.test(sym)) tenka1_2017a(input);
+    else if (/^[01]{16}$/.test(sym)) abc323a(input);
     else if (/^(0|-?[1-9][0-9]*)$/.test(sym)) {
       const num = BigInt(sym);
       if (0n <= num && num <= 1n) abc178a(input);
