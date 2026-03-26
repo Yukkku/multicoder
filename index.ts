@@ -17,7 +17,7 @@ import abc146a from "./solvers/abc/146/a";
 import abc158a from "./solvers/abc/158/a";
 import abc166a from "./solvers/abc/166/a";
 import abc175a from "./solvers/abc/175/a";
-import abc178a from "./solvers/abc/178/a";
+import abc178a_abc439a from "./solvers/multi/abc178a_abc439a";
 import abc232a_abc389a from "./solvers/multi/abc232a_abc389a";
 import abc247a from "./solvers/abc/247/a";
 import abc262a from "./solvers/abc/262/a";
@@ -53,7 +53,7 @@ if (input.length === 1) {
     else if (/^[01]{16}$/.test(sym)) abc323a(input);
     else if (/^(0|-?[1-9][0-9]*)$/.test(sym)) {
       const num = BigInt(sym);
-      if (0n <= num && num <= 1n) abc178a(input);
+      if (0n <= num && num <= 11n) abc178a_abc439a(input);
       if (22n <= num && num <= 25n) abc115a(input);
       if (2000n <= num && num <= 3000n) abc262a(input);
     }
